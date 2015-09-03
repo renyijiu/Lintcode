@@ -1,9 +1,9 @@
 '''
 给出一棵二叉树,返回其中序遍历.
 
-思路：中序遍历为左结点，根，右结点
-(1)递归解法：先递归遍历左结点，然后输出结点值，在递归遍历右结点。
-(2)非递归解法：当结点不为空时，将结点入栈，将结点置为左孩子作为当前结点；若结点为空，则将栈顶元素出栈作为当前结点，输出结点值；再将结点置为右孩子作为当前结点，直至栈和结点均为空，表明全部遍历了。
+思路：中序遍历顺序为左节点，根，右节点
+(1)递归解法：先递归遍历左节点，然后输出根节点，在递归遍历右节点。
+(2)非递归解法：当节点不为空时，将节点入栈，将节点置为左孩子作为当前节点；若节点为空，则将栈顶元素出栈作为当前节点，输出节点值；再将节点置为右孩子作为当前节点，直至栈和节点均为空，表明全部遍历了。
 '''
 
 
@@ -26,10 +26,10 @@ class Solution:
         # write your code here
         if root is None:
             return self.result
-        if root.left:              #左结点的递归
+        if root.left:              #左节点的递归
             self.inorderTraversal(root.left)
         self.result.append(root.val)
-        if root.right:             #右结点的递归
+        if root.right:             #右节点的递归
             self.inorderTraversal(root.right)
         return self.result
 

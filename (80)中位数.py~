@@ -23,10 +23,9 @@ class Solution:
                 N = len(nums) / 2
             return self.quick_sort(nums, N)
 
-
-    def quick_sort(self, arry, size):
+    def quick_sort(self, arry, size):                 #修改的快速排序
         key = arry[0]
-        lt = [i for i in arry if cmp(i, key) == -1]
+        lt = [i for i in arry if cmp(i, key) == -1]           #将元素分类，确定基数的位置     
         eq = [i for i in arry if cmp(i, key) == 0]
         gt = [i for i in arry if cmp(i, key) == 1]
         if (len(lt)+len(eq)) < size:

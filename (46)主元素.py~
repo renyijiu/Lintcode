@@ -23,6 +23,6 @@ class Solution:
                 else:
                     count -= 1
                     if count == 0:
-                        curnum = nums[i]
+                        curnum = nums[i]     #更新基数
                         count = 1
             return curnum

@@ -25,7 +25,6 @@ class Solution:
         else:
             return node1.val+node2.val
     
-    
     def addLists(self, l1, l2):
         # write your code here
         ResultHead = ListNode(0)
